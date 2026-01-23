@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* base styles */
+body {
+  background: #ebf0fa;
+  color: rgb(107 114 128); /* gray-500 */
+  margin: 2rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+  color: var(--color-primary, #3b82f6);
+  font-size: 1.125rem; /* text-lg */
+}
+
+main {
+  max-width: 64rem; /* max-w-5xl */
+  margin: 3rem auto; /* my-12 mx-auto */
+  padding: 0 2rem; /* px-8 */
+}
+
+main > h2 {
+  margin-bottom: 1rem; /* mb-4 */
+  padding-bottom: 0.5rem; /* pb-2 */
+  font-size: 1rem; /* text-base */
+}
+
+p > a {
+  color: var(--color-primary, #3b82f6);
+  text-decoration: underline;
+}
+
+/* nav styles */
+nav {
+  padding-bottom: 1rem; /* pb-4 */
+  border-bottom: 2px solid rgb(229 231 235); /* border-b-2 border-gray-200 */
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* gap-5 */
+  margin: 2.5rem auto; /* my-10 mx-auto */
+  max-width: 64rem; /* max-w-5xl */
+}
+
+nav a, nav span {
+  color: rgb(107 114 128); /* text-gray-500 */
+}
+
+nav a:hover {
+  color: black;
+}
+
+main nav {
+  border: 0;
+}
+
+/* button styles */
+button {
+  padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  border-radius: 0.125rem; /* rounded-sm */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+button:hover {
+  opacity: 0.9; /* bg-opacity-90 */
+}
+
+.btn-primary {
+  background-color: var(--color-primary, #3b82f6);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgb(229 231 235); /* bg-gray-200 */
+  color: rgb(17 24 39); /* text-gray-900 */
+}
+
+/* form styles */
+form {
+  padding: 1rem 1.75rem; /* py-4 px-7 */
+  background-color: var(--color-primary, #3b82f6);
+  background-opacity: 0.05; /* bg-opacity-5 */
+  border-radius: 0.375rem; /* rounded-md */
+  display: block;
+  margin: 0 auto; /* mx-auto */
+  min-width: fit-content; /* min-w-fit */
+  width: 25%; /* w-1/4 */
+}
+
+form label {
+  display: block;
+}
+
+form input,
+form textarea,
+form select {
+  display: block;
+  margin-top: 0.5rem; /* mt-2 */
+  margin-bottom: 1rem; /* my-4 */
+  padding: 0.25rem 0.5rem; /* py-1 px-2 */
+  border-radius: 0.125rem; /* rounded-sm */
+  width: 100%;
+}
+
+form button {
+  display: block;
+  margin: 0 auto; /* mx-auto */
+}
+
+/* feedback styles */
+.error {
+  border: 2px solid rgb(239 68 68); /* border-2 border-red-500 */
+  background-color: rgb(252 165 165); /* bg-red-300 */
+  color: rgb(153 27 27); /* text-red-800 */
+  padding: 0.25rem 0.5rem; /* py-1 px-2 */
+  border-radius: 0.125rem; /* rounded-sm */
+  display: block;
+  max-width: fit-content; /* max-w-fit */
+  margin: 1rem auto; /* my-4 mx-auto */
+}
+
+/* card styles */
+.card {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+  border-radius: 0.375rem; /* rounded-md */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  margin: 1rem 0; /* my-4 */
+  position: relative;
+  overflow: hidden;
+}
+
+.card h3 {
+  font-weight: 700;
+  color: rgb(55 65 81); /* text-gray-700 */
+  font-size: 0.875rem; /* text-sm */
+  margin-bottom: 0;
+}
+
+.card p {
+  margin: 1rem 0; /* my-4 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.5rem; /* leading-6 */
+}
+
+/* pill styles */
+.pill {
+  padding: 0.25rem 0.5rem; /* py-1 px-2 */
+  margin-top: 0.75rem; /* mt-3 */
+  display: inline-block;
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600; /* font-semibold */
+}
+
+.pill.high {
+  background-color: rgb(252 165 165); /* bg-red-300 */
+  color: rgb(220 38 38); /* text-red-600 */
+}
+
+.pill.medium {
+  background-color: rgb(147 197 253); /* bg-blue-300 */
+  color: rgb(37 99 235); /* text-blue-600 */
+}
+
+.pill.low {
+  background-color: rgb(110 231 183); /* bg-emerald-300 */
+  color: rgb(5 150 105); /* text-emerald-600 */
+}
+
+.card .pill {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 0.375rem; /* rounded-tl-md */
+}
