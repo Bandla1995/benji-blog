@@ -16,7 +16,7 @@ export default function Navbar() {
       />
           <h1>Benji Help desk</h1>
           <Link href="/">Dashboard</Link> 
-          <Link href="/orders">Orders</Link>
+          <Link href="/tickets">Tickets</Link>
         </nav>
   )
 }
