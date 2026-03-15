@@ -8,17 +8,26 @@ interface Ticket {
   user_email: string
 }
 
-async function getTickets() {
-    const res = await fetch('http://localhost:4000/tickets', {
+async function getTickets(): Promise<Ticket[]>  {
+    const res = await fetch('http://localhost:4000/tickets' , {
         next: {
             revalidate: 0
         }
     });
     
-    return res.json()   
+ if (!res.ok) {
+    throw new Error(`Failed to fetch tickets: ${res.status}`);
+  }
+
+  return res.json();
 }
 export default async function TicketList() {
-  const tickets: Ticket[] = await getTickets();
+    const tickets: Ticket[] = await getTickets();
+
+    if (tickets.length === 0) {
+    return <p className="text-center">There are no open tickets, yay!</p>;
+  }
+
 
   return (
       <>
